@@ -37,7 +37,7 @@ Welcome to the Collaborative Notes App! This app allows users to create, update,
 ### Prerequisites
 
 - **Node.js** (>=14.x)
-- **Yarn** or **npm**
+- **Yarn** or **npm** or **bun** or **pnpm**
 - **PostgreSQL** (via Neon or locally)
 - **Kafka** (optional, for event-driven architecture)
 - **Kinde Auth** account (free plan available)
