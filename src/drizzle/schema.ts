@@ -1,4 +1,4 @@
-import { sql } from "drizzle-orm";
+import { InferInsertModel, InferSelectModel, sql } from "drizzle-orm";
 import { pgTable, text, timestamp, uuid, varchar } from "drizzle-orm/pg-core";
 
 const timestampFields = {
@@ -69,3 +69,19 @@ export const collaborators = pgTable("collaborators", {
     .references(() => roles.id)
     .notNull(),
 });
+
+export type UserInsert = InferInsertModel<typeof users>;
+export type NoteInsert = InferInsertModel<typeof notes>;
+export type FolderInsert = InferInsertModel<typeof folders>;
+export type PermissionInsert = InferInsertModel<typeof permissions>;
+export type RoleInsert = InferInsertModel<typeof roles>;
+export type RolePermissionInsert = InferInsertModel<typeof rolePermissions>;
+export type CollaboratorInsert = InferInsertModel<typeof collaborators>;
+
+export type UserSelect = InferSelectModel<typeof users>;
+export type NoteSelect = InferSelectModel<typeof notes>;
+export type FolderSelect = InferSelectModel<typeof folders>;
+export type PermissionSelect = InferSelectModel<typeof permissions>;
+export type RoleSelect = InferSelectModel<typeof roles>;
+export type RolePermissionSelect = InferSelectModel<typeof rolePermissions>;
+export type CollaboratorSelect = InferSelectModel<typeof collaborators>;
