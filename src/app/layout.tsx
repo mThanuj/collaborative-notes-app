@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Lora } from "next/font/google";
 import "./globals.css";
-import { AuthProvider } from "@/components/auth-provider";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -23,12 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <AuthProvider>
-      <html lang="en">
-        <body className={`${lora.className} ${geistMono.variable} antialiased`}>
-          {children}
-        </body>
-      </html>
-    </AuthProvider>
+    <html lang="en">
+      <body className={`${lora.className} ${geistMono.variable} antialiased`}>
+        {children}
+      </body>
+    </html>
   );
 }

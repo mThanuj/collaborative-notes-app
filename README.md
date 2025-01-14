@@ -24,7 +24,7 @@ Welcome to the Collaborative Notes App! This app allows users to create, update,
   - **Drizzle ORM**: TypeScript-first ORM for interacting with PostgreSQL, providing a robust and intuitive interface for querying the database.
 
 - **Authentication & Authorization**:
-  - **Kinde Auth**: Secure authentication and role-based access management. Kinde Auth handles login, signup, and session management, along with API-driven user role validation.
+  - **Next Auth**: Secure authentication and role-based access management. Next Auth handles login, signup, and session management.
 - **Event-Driven Architecture**:
 
   - **Kafka**: Used for producing and consuming events for operations like note creation, updates, deletions, and real-time updates. Kafka decouples processes for better scalability and fault tolerance.
@@ -40,7 +40,7 @@ Welcome to the Collaborative Notes App! This app allows users to create, update,
 - **Yarn** or **npm** or **bun** or **pnpm**
 - **PostgreSQL** (via Neon or locally)
 - **Kafka** (optional, for event-driven architecture)
-- **Kinde Auth** account (free plan available)
+- **Next Auth**
 
 ### Setup Instructions
 
@@ -106,7 +106,7 @@ or
 
 ## Usage
 
-- **Login/Signup**: Use Kinde Auth to log in or sign up. Roles and permissions are managed through the Kinde Auth dashboard.
+- **Login/Signup**: Use Next Auth to log in or sign up. Roles and permissions are managed through the Next Auth and Neon DB.
 - **Create Notes/Folders**: After logging in, users can create, update, delete, and share notes and folders.
 - **Real-Time Updates**: Subscribe to WebSocket events to get real-time updates when notes or folders are created, updated, or deleted.
 
@@ -147,4 +147,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Next.js** for building the React framework.
 - **Neon (PostgreSQL)** for the cloud-native database.
 - **Kafka** for event-driven architecture.
-- **Kinde Auth** for authentication and role management.
+- **Next Auth** for authentication and role management.
