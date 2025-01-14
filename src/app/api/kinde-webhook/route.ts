@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import jwksClient from "jwks-rsa";
 import jwt, { type Jwt, type JwtPayload } from "jsonwebtoken";
+import { config } from "@/lib/config";
 
 const client = jwksClient({
-  jwksUri: `${process.env.KINDE_ISSUER_URL}/.well-known/jwks.json`,
+  jwksUri: `${config.env.kinde.issuerUrl}/.well-known/jwks.json`,
 });
 
 export async function POST(req: Request) {
